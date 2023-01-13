@@ -4,11 +4,11 @@ const wss = new WebSocket.Server({port:5694});
 
 wss.on("connection", (ws) => {
 
-    console.log("[Server] A client was connected.");
+    console.log("[Server] A client has connected.");
 
     ws.on('message', (message) => {
 
-        console.log("[Server] Received message: %s", message);
+        console.log(`[Server] Received message: ${message}`);
 
         ws.on('close', () => {
 
